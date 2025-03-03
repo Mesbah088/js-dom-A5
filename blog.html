@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F4F7FF]">
+    <header class="max-w-full w-[90%] mx-auto  p-6 rounded-lg shadow-lg">
+        <div class=" flex justify-between bg-[#fff]  rounded-md p-6  my-6">
+            <div>
+               <h3 class="text-[#00303C] text-[35px] flex justify-center gap-0">
+                   <img src="./assets/image/Vector.png" alt="img">
+                   Dev <span class="font-bold">Board</span></h3>
+            </div>
+            <div>
+                <a href="./index.html" class="bg-blue-500 text-white px-4 py-2 rounded">Back to Desk</a>
+            </div>
+           </div>
+    </header>
+    
+    <main class="max-w-full w-[90%] mx-auto  p-6 rounded-lg shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="mb-2 text-2xl font-bold">Blogs</h1>
+        </div>
+        <div class="space-y-6">
+            <div class="bg-white shadow rounded-lg p-4">
+                <h3 class="text-xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h3>
+                <p class="text-gray-600 mt-2">document.getElementById("id") → Selects an element by its ID. <br>
+                    document.getElementsByClassName("class") → Selects elements by class name. <br>
+                    document.getElementsByTagName("tag") → Selects elements by tag name. <br>
+                    document.querySelector("selector") → Selects the first matching element. <br>
+                    document.querySelectorAll("selector") → Selects all matching elements.</p>
+            </div>
+            
+            <div class="bg-white shadow rounded-lg p-4">
+                <h3 class="text-xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+                <p class="text-gray-600 mt-2">innerHTML → Retrieves or sets the HTML content inside an element (includes tags). <br>
+                    innerText → Retrieves or sets only the visible text inside an element (ignores hidden text). <br>
+                    textContent → Retrieves or sets all text content inside an element (including hidden text). </p>
+            </div>
+            
+            <div class="bg-white shadow rounded-lg p-4">
+                <h3 class="text-xl font-bold">Question-3: What is event delegation in the DOM?</h3>
+                <p class="text-gray-600 mt-2">A technique where a parent element handles events for its child elements using event bubbling. <br>
+                    Useful for dynamically added elements. <br>
+                    Implemented by adding an event listener to a common ancestor and using event.target to detect the clicked child.</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4">
+                <h3 class="text-xl font-bold">Question-4: What is event bubbling in the DOM?</h3>
+                <p class="text-gray-600 mt-2">When an event triggered on a child element propagates up through its ancestors. <br>
+                    Example: Clicking a button inside a div triggers the click event on both the button and the div. <br>
+                    Can be stopped using event.stopPropagation().</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4">
+                <h3 class="text-xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+                <p class="text-gray-600 mt-2">Creating an element → document.createElement("tag"). <br>
+                    Adding an element → parent.appendChild(child) or parent.append(child). <br>
+                    Removing an element → element.remove() or parent.removeChild(child).</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer >
+       
+    </footer>
+</body>
+</html>

@@ -1,138 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#F4F7FF] ">
-    <div class="max-w-full w-[90%] mx-auto  p-6 rounded-lg shadow-lg">
-        <div class=" flex justify-between bg-[#fff]  rounded-md p-6  my-6">
-         <div>
-            <h3 class="text-[#00303C] text-[35px] flex justify-center gap-0">
-                <img src="./assets/image/Vector.png" alt="img">
-                Dev <span class="font-bold">Board</span></h3>
-         </div>
-         <div>
-           <div class="flex gap-6">
-           <div class=" flex justify-center bg-[#F4F7FF] rounded-full px-3 items-center gap-1">
-            <img src="/assets/image/check.png" alt="">
-             <span class="text-xl">23</span>
-           
-           </div>
-           <div>
-            <img src="assets/theme-btn.png" alt="theme-btn">
-         </div>
-           </div>
-         </div>
+
+<body class="bg-[#F4F7FF] transition-all duration-300">
+    <div class="max-w-full w-[90%] mx-auto p-6 rounded-lg shadow-lg">
+        <div class="flex justify-between bg-white rounded-md p-6 my-6">
+            <div>
+                <h3 class="text-[#00303C] text-[35px] flex items-center gap-2">
+                    <img src="./assets/image/Vector.png" alt="img"> Dev <span class="font-bold">Board</span>
+                </h3>
+            </div>
+            <div class="flex gap-6">
+                <div class="flex justify-center bg-[#F4F7FF] rounded-full px-3 items-center gap-1">
+                    <img src="/assets/image/check.png" alt="">
+                    <span class="card-count text-xl">0</span>
+                </div>
+                <div>
+                    <img class="update-background cursor-pointer" src="assets/theme-btn.png" alt="theme-btn">
+                </div>
+            </div>
         </div>
-      
-        
+
         <div class="grid grid-cols-4 gap-6">
-            <div class="col-span-3 " >
+            <div class="col-span-3">
                 <header class="my-4 bg-white">
-               <div class="flex items-center justify-between gap-6 p-4">
-                        <div class="flex items-center gap-5 bg-[#F4F7FF] rounded-lg  px-4 py-9">
+                    <div class="flex items-center justify-between gap-3 p-4">
+                        <div class="flex items-center gap-5 w-full bg-[#F4F7FF] rounded-lg px-4 py-6">
                             <img class="w-6" src="/assets/image/check.png" alt="">
-                            <div class="flex flex-col  justify-start ">
-                           <p class=" text-gray-700">Task Assigned</p>
-                            <p class=" font-bold text-[32px] text-center" id="task-count">6</p>
+                            <div class="flex flex-col justify-start">
+                                <p class="text-gray-700">Task Assigned</p>
+                                <p class="font-bold text-[22px] text-center" id="task-count">0</p>
                             </div>
                         </div>
-                        <div class=" flex bg-gradient-to-r from-blue-500 to-purple-500 text-white px-9 py-3 rounded-lg font-semibold gap-4">
+                        <a href="./blog.html "
+                            class="flex bg-gradient-to-r w-full from-blue-500 to-purple-500 text-white px-9 py-3 rounded-lg font-semibold gap-4">
                             <img src="assets/board.png" alt="board">
                             <h3>Discover Something <br> New Today!</h3>
-                        </div>
-                        <div class="flex items-center bg-gray-100 px-4 py-2 justify-end rounded-lg">
+                        </a>
+                        <div class="flex items-center w-full gap-5 bg-[#F4F7FF] rounded-lg px-4 py-9">
                             <span class="mr-2">📅</span>
                             <span id="current-date" class="font-bold text-gray-900"></span>
                         </div>
                     </div>
                 </header>
-              <div id="task-list" class="grid grid-cols-3 gap-6">
 
-                <div class=" p-6 rounded-lg shadow-md bg-[#F4F7FF] border border-gray-200" data-task="Fix Mobile Button Issue">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">ShopEase</span>
-                    <h2 class="font-bold text-lg mt-2">Fix Mobile Button Issue</h2>
-                    <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                    <div class="flex gap-4">
-                        <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold"></span></p>
-                        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button>
-                       </div>
-                </div>
-                
-                <div class="bg-[#F4F7FF] p-6 rounded-lg shadow-md border border-gray-200" data-task="Add Dark Mode">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">CloudSync</span>
-                    <h2 class="font-bold text-lg mt-2">Add Dark Mode</h2>
-                    <p class="bg-[#FFFFFF] rounded-md  text-sm text-gray-600 mt-1">Store the user's preference in localStorage, update CSS.</p>
-                    <div class="flex gap-4">
-                        <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold"></span></p>
-                        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button>
-                       </div>
-                </div>
-                <div class=" bg-[#F4F7FF] p-6 rounded-lg shadow-md border border-gray-200" data-task="Add Dark Mode">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">SwiftPay   </span>
-                    <h2 class="font-bold text-lg mt-2">Optimize  Home page </h2>
-                    <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                   <div class="flex gap-4">
-                    <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold"></span></p>
-                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button>
-                   </div>
-                </div>
-                <div class=" bg-[#F4F7FF] p-6 rounded-lg shadow-md border border-gray-200" data-task="Add Dark Mode">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">Meta</span>
-                    <h2 class="font-bold text-lg mt-2">Add new emoji 🤲</h2>
-                    <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                    <div class="flex gap-4">
-                        <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold"></span></p>
-                        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button>
-                       </div>
-                </div>
-                <div class=" bg-[#F4F7FF] p-6 rounded-lg shadow-md border border-gray-200" data-task="Add Dark Mode">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">Google LLC</span>
-                    <h2 class="font-bold text-lg mt-2">Integrate OpenAI API </h2>
-                    <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                   <div class="flex gap-4">
-                    <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold"></span></p>
-                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button>
-                   </div>
-                </div>
-                <div class=" bg-[#F4F7FF] p-6 rounded-lg shadow-md border border-gray-200" data-task="Add Dark Mode">
-                    <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">Glassdoar</span>
-                    <h2 class="font-bold text-lg mt-2">Improve Job searching </h2>
-                    <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
-                    <div class="flex gap-4"><p class="text-xs text-gray-500 mt-3">Deadline <br> <span class="current-date font-semibold"></span></p>
-                        <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg font-semibold complete-btn">Complete</button></div>
-                </div>
-              </div>
+                <div id="task-list" class="grid grid-cols-3 gap-6"></div>
             </div>
-            
-            <aside class="col-span-1 bg-white p-6 rounded-lg shadow-md border border-gray-200 ">
-               <div class="flex justify-center gap-2 text-colour[#00303C]">
-                <img src="assets/activity.png" alt="activity=log">
-                <h2 class="font-semibold text-lg mb-4 items-center text-center">Activity Log</h2>
-               </div>
-              <div class="justify-center">
-                <button class="mt-4 px-6 py-2 bg-blue-500 justify-center text-white rounded-lg font-semibold complete-btn">Clear History</button>
-              </div>
-                <ul id="activity-log" class="text-sm text-gray-700 space-y-2"></ul>
+
+            <aside class="col-span-1 bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="flex justify-center gap-2 text-[#00303C]">
+                    <img class=" h-7 w-7" src="assets/activity.png" alt="activity-log">
+                    <h2 class="font-semibold text-lg mb-4">Activity Log</h2>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button id="clear-history-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Clear
+                        History</button>
+                </div>
+                <ul id="activity-log" class="text-sm text-gray-700 space-y-2 mt-4"></ul>
             </aside>
         </div>
     </div>
-    
-    <script src="index.js">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const activityLog = document.getElementById("activity-log");
+            const taskCount = document.getElementById("task-count");
+            const cardCount = document.querySelector(".card-count");
+            const currentDateElement = document.getElementById("current-date");
+            const clearHistoryBtn = document.querySelector("#clear-history-btn");
+            const themeBtn = document.querySelector(".update-background");
+            const taskListContainer = document.getElementById("task-list");
+
         
+            let tasks = [
+                { id: 1, project: "ShopEase", name: "Fix Mobile Button Issue", details: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly", completed: false },
+                { id: 2, project: "CloudSync", name: "Add Dark Mode", details: "Store user preference in localStorage and update dynamically.", completed: false },
+                { id: 3, project: "SwiftPay", name: "Optimize Home Page", details: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.", completed: false },
+                { id: 4, project: "Meta", name: "Add new emoji 🤲", details: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly", completed: false },
+                { id: 5, project: "Google LLC", name: "Integrate OpenAI API", details: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly", completed: false },
+                { id: 6, project: "Glassdoor", name: "Improve Job Searching", details: "Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.", completed: false }
+            ];
+
+          
+            const currentDate = new Date().toLocaleDateString("en-GB", { day: '2-digit', month: 'long', year: 'numeric' });
+            document.querySelectorAll(".current-date").forEach(span => span.textContent = currentDate);
+            currentDateElement.textContent = currentDate;
+
+         
+            function renderTasks() {
+                taskListContainer.innerHTML = "";
+                tasks.forEach(task => {
+                    const taskCard = document.createElement("div");
+                    taskCard.classList.add("p-6", "rounded-lg", "shadow-md", "bg-[#F4F7FF]", "border", "border-gray-200");
+                    taskCard.dataset.taskId = task.id;
+
+                    taskCard.innerHTML = `
+                        <span class="bg-white text-gray-700 px-3 py-1 rounded-full text-xs">${task.project}</span>
+                        <h2 class="font-bold text-lg mt-2">${task.name}</h2>
+                        <p class="bg-[#FFFFFF] rounded-md text-sm text-gray-600 mt-1">${task.details}</p>
+                        <div class="flex gap-4">
+                            <p class="text-xs text-gray-500 mt-3">Deadline: <span class="current-date font-semibold">${currentDate}</span></p>
+                            <button class="mt-4 px-6 py-2 text-white rounded-lg font-semibold complete-btn ${task.completed ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500'}" ${task.completed ? 'disabled' : ''}>
+                                ${task.completed ? 'Completed' : 'Complete'}
+                            </button>
+                        </div>
+                    `;
+
+                    if (!task.completed) {
+                        taskCard.querySelector(".complete-btn").addEventListener("click", () => markTaskComplete(task.id));
+                    }
+
+                    taskListContainer.appendChild(taskCard);
+                });
+
+                updateTaskCount();
+            }
+
+            function markTaskComplete(taskId) {
+    const task = tasks.find(t => t.id === taskId);
+    if (task) {
+        task.completed = true;
+
+       
+        const logEntry = document.createElement("li");
+        logEntry.textContent = `Completed: ${task.name} at ${new Date().toLocaleTimeString()}`;
+        logEntry.classList.add("bg-[#F4F7FF]", "rounded-[8px]", "p-2", "mt-2");
+
+        activityLog.appendChild(logEntry);
+        renderTasks();
+    }
+}
+
+
+            function updateTaskCount() {
+                taskCount.textContent = tasks.filter(task => !task.completed).length;
+                cardCount.textContent = activityLog.children.length;
+            }
+
+            clearHistoryBtn.addEventListener("click", () => {
+                activityLog.innerHTML = "";
+                cardCount.textContent = 0;
+            });
+
+            let colors = ["#F4F7FF", "#FFD700", "#90EE90", "#FFB6C1", "#87CEEB", "#FF6347"];
+            let colorIndex = 0;
+
+            themeBtn.addEventListener("click", () => {
+                colors.forEach((color, index) => {
+                    if (index === colorIndex) {
+                        document.body.style.backgroundColor = color;
+                    }
+                });
+                colorIndex = (colorIndex + 1) % colors.length;
+            });
+
+
+            renderTasks();
+        });
     </script>
 </body>
+
 </html>
